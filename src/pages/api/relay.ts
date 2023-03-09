@@ -1,7 +1,8 @@
-import { NextApiRequest, NextApiResponse } from 'next'
+/* eslint-disable */
+import { NextApiRequest, NextApiResponse, NextApiHandler } from 'next'
 
 
-function CORSMiddleware(handler: any) {
+function CORSMiddleware(handler: NextApiHandler) {
     return (req: NextApiRequest, res: NextApiResponse) => {
         res.setHeader('Access-Control-Allow-Credentials', 'true')
         res.setHeader('Access-Control-Allow-Origin', '*')
